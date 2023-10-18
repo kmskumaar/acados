@@ -262,7 +262,7 @@ class AcadosSimSolver:
             if cmake_builder is not None:
                 cmake_builder.exec(code_export_dir, verbose)
             else:
-                verbose_system_call(['make', 'sim_shared_lib'], verbose)
+                verbose_system_call(['mingw32-make', 'sim_shared_lib'], verbose)
         os.chdir(cwd)
 
 
