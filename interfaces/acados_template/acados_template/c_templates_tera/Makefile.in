@@ -327,9 +327,9 @@ LDLIBS+= -lm
 LDLIBS+= {{ link_libs }}
 
 # libraries
-LIBACADOS_SOLVER=libacados_solver_{{ model.name }}{{ shared_lib_ext }}
-LIBACADOS_OCP_SOLVER=libacados_ocp_solver_{{ model.name }}{{ shared_lib_ext }}
-LIBACADOS_SIM_SOLVER=lib$(SIM_SRC:.c={{ shared_lib_ext }})
+LIBACADOS_SOLVER=acados_solver_{{ model.name }}{{ shared_lib_ext }}
+LIBACADOS_OCP_SOLVER=acados_ocp_solver_{{ model.name }}{{ shared_lib_ext }}
+LIBACADOS_SIM_SOLVER=$(SIM_SRC:.c={{ shared_lib_ext }})
 
 # virtual targets
 .PHONY : all clean
